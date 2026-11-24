@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "admin-invite-member",
+    "kind": "interactive",
+    "goal": "An admin invites a new member by email and sees the invitation listed as invited",
+    "requirementIndexes": [],
+    "acceptanceCriteriaIndexes": [],
+    "steps": [
+      "Sign in",
+      "Open the Admin page",
+      "Invite the email address newmember@unbreakable.test and press Send invite"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Welcome"
+      },
+      {
+        "afterStep": 1,
+        "expectText": "Invite"
+      },
+      {
+        "afterStep": 2,
+        "expectText": "newmember@unbreakable.test"
+      }
+    ]
+  }
+}

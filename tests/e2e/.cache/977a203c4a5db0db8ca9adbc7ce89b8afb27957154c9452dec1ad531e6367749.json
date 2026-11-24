@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T14:51:56.678Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "type",
+        "summary": "type \"Ready for leg day\" into textbox \"Write a message\"",
+        "target": {
+          "role": "textbox",
+          "name": "Write a message",
+          "placeholder": "Message the crew…"
+        },
+        "value": "Ready for leg day"
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Send\"",
+        "target": {
+          "role": "button",
+          "name": "Send"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "group-chat-post.e2e.ts::group-chat-post",
+      "targetId": "web",
+      "instructionDigest": "c89b06695cfc8411d3af019e4fa9c37430ae5c4e0cf8bc900d3843ca6bcdf83f",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Typed \"Ready for leg day\" into the Group Chat message box and pressed Send. The message now appears in the chat list as \"Admin You 2:51 pm ... Ready for leg day\" and the voice count changed to \"1 voice\".",
+    "startPath": "/chat",
+    "endPath": "/chat",
+    "endAnchors": [
+      {
+        "text": "1 voice"
+      },
+      {
+        "text": "Today"
+      },
+      {
+        "text": "You"
+      },
+      {
+        "role": "button",
+        "name": "Delete message from Admin"
+      },
+      {
+        "text": "Ready for leg day"
+      },
+      {
+        "role": "region",
+        "name": "Today"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "text": "0 voices"
+      },
+      {
+        "text": "No messages yet"
+      },
+      {
+        "text": "Kick off the conversation — share a win, ask a question, or hype up the crew."
+      }
+    ],
+    "endWaitMs": 11179,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "group-chat-post",
+    "kind": "interactive",
+    "goal": "A member posts a message to the shared group chat and sees it with their name",
+    "requirementIndexes": [],
+    "acceptanceCriteriaIndexes": [],
+    "steps": [
+      "Sign in",
+      "Open the Group Chat page",
+      "Post a message saying Ready for leg day"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Welcome"
+      },
+      {
+        "afterStep": 1,
+        "expectText": "Group Chat"
+      },
+      {
+        "afterStep": 2,
+        "expectText": "Ready for leg day"
+      }
+    ]
+  }
+}

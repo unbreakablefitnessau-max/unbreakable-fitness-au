@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "flows": {
+    "admin-invite-member": {
+      "plan": [
+        "18c0ad4c1d8bdc78",
+        "5bee9fbec2525bba",
+        "881ff3227fdfcaea",
+        "9e4207d0ae93af1c",
+        "bd8f4fc37e7cd7a9",
+        "eaff6d64a24ac695"
+      ],
+      "last": "passed"
+    },
+    "group-chat-post": {
+      "plan": [
+        "0d1c9d0a875f9cd2",
+        "28036f2f26774632",
+        "5707db37df747e9f",
+        "5ed9f6e703492eb5",
+        "8ec90004d68f5aee",
+        "9eb982d3850d3894",
+        "cb7907b7786b7de7",
+        "efd00d94c3c7bf50"
+      ],
+      "last": "passed"
+    },
+    "home-screen-install": {
+      "plan": [
+        "c2eb684d523317ba",
+        "cacd902664d68f76"
+      ],
+      "last": "passed"
+    },
+    "installable-app-shell": {
+      "plan": [
+        "1869162d1a79b982",
+        "29c35f5aa9798048",
+        "39a40ace9693cd64",
+        "4910c7cdb2d101ba",
+        "4d0ffca1553ebe3c",
+        "57ce8da9d6edb1e8",
+        "5ca0f542a9150026",
+        "66b0d419513261f8",
+        "68d2aa4540be10e4",
+        "7bf7cb887b479012",
+        "7d0528c5a991df04",
+        "8978f4e5225db3af",
+        "89eb6c9912eb9185",
+        "904ffe3969e5b753",
+        "a1d4347fa7bf3b74",
+        "bcb488060fde0c13",
+        "be0a122d681bfe36",
+        "c301731982169867",
+        "c73e89596e5bec70",
+        "ceea34ace07c9cd6",
+        "d7cec019956ab2b2",
+        "da6c9ce69c9585e1",
+        "de2a9b7212b4f137",
+        "e755aebfa078b806",
+        "fab82851f402e08d"
+      ],
+      "last": "passed"
+    }
+  },
+  "order": [
+    "group-chat-post",
+    "admin-invite-member",
+    "home-screen-install",
+    "installable-app-shell"
+  ]
+}

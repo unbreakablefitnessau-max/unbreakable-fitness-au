@@ -1,0 +1,160 @@
+type WorkoutInput = 
+ record {
+   category: text;
+   coachingNotes: text;
+   description: text;
+   difficulty: text;
+   durationMinutes: nat;
+   exercises: vec Exercise;
+   title: text;
+ };
+type WorkoutId = nat;
+type Workout = 
+ record {
+   category: text;
+   coachingNotes: text;
+   createdAt: Timestamp;
+   description: text;
+   difficulty: text;
+   durationMinutes: nat;
+   exercises: vec Exercise;
+   id: WorkoutId;
+   title: text;
+ };
+type Value = 
+ variant {
+   "bool": bool;
+   float: float64;
+   "int": int;
+   "nat": nat;
+   "null";
+   "text": text;
+ };
+type UserRole = 
+ variant {
+   admin;
+   guest;
+   user;
+ };
+type Timestamp = int;
+type Result__1 = 
+ variant {
+   err: Error;
+   ok;
+ };
+type Result = 
+ record {
+   hasMore: bool;
+   rows: vec vec Cell;
+ };
+type MessageId = nat;
+type Message = 
+ record {
+   body: text;
+   createdAt: Timestamp;
+   id: MessageId;
+   sender: principal;
+   senderName: text;
+ };
+type MemberView = 
+ record {
+   displayName: text;
+   email: text;
+   isAdmin: bool;
+   "principal": principal;
+ };
+type InviteStatus = 
+ variant {
+   invited;
+   joined;
+   revoked;
+ };
+type InviteId = nat;
+type Invite = 
+ record {
+   email: text;
+   id: InviteId;
+   invitedAt: Timestamp;
+   joinedAt: opt Timestamp;
+   joinedPrincipal: opt principal;
+   status: InviteStatus;
+ };
+type Exercise = 
+ record {
+   durationSeconds: opt nat;
+   name: text;
+   notes: opt text;
+   reps: opt nat;
+   sets: opt nat;
+ };
+type Error = 
+ variant {
+   AmbiguousAttribute: record {
+                         field: text;
+                         sources: vec text;
+                       };
+   FrontendOriginMismatch: record {
+                             expected: vec text;
+                             got: text;
+                           };
+   FrontendOriginsNotConfigured;
+   MalformedCandid;
+   MissingField: text;
+   MixedSsoSources: record {
+                      otherKeys: vec text;
+                      ssoKeys: vec text;
+                    };
+   NoAttributes;
+   Stale: record {ageNs: nat;};
+   UnknownNonce;
+   UntrustedSsoSource: record {domain: text;};
+ };
+type Completion = 
+ record {
+   completedAt: Timestamp;
+   id: nat;
+   member: principal;
+   workoutId: WorkoutId;
+   workoutTitle: text;
+ };
+type Cell = 
+ record {
+   name: text;
+   value: Value;
+ };
+type AccessState = 
+ variant {
+   member;
+   pending;
+   unregistered;
+ };
+service : {
+  _initialize_access_control: () -> ();
+  _internet_identity_sign_in_finish: () -> (Result__1);
+  _internet_identity_sign_in_start: () -> (blob);
+  assignCallerUserRole: (user: principal, role: UserRole) -> ();
+  completeWorkout: (id: nat) -> (Completion);
+  createWorkout: (input: WorkoutInput) -> (Workout);
+  deleteMessage: (id: nat) -> ();
+  deleteWorkout: (id: nat) -> ();
+  execute: (qJson: text) -> (Result) query;
+  getApiDoc: () -> (text) query;
+  getCallerUserRole: () -> (UserRole) query;
+  getMyAccessState: () -> (AccessState) query;
+  getMyMemberProfile: () -> (opt MemberView) query;
+  getWorkout: (id: nat) -> (opt Workout) query;
+  inviteMember: (email: text) -> (Invite);
+  isCallerAdmin: () -> (bool) query;
+  listInvites: () -> (vec Invite) query;
+  listMembers: () -> (vec MemberView) query;
+  listMessages: () -> (vec Message) query;
+  listMyCompletions: () -> (vec Completion) query;
+  listWorkouts: () -> (vec Workout) query;
+  promoteToAdmin: (member: principal) -> ();
+  registerMember: (displayName: text) -> (AccessState);
+  removeMember: (member: principal) -> ();
+  revokeInvite: (id: nat) -> ();
+  schema: () -> (text) query;
+  sendMessage: (body: text) -> (Message);
+  updateWorkout: (id: nat, input: WorkoutInput) -> (Workout);
+}

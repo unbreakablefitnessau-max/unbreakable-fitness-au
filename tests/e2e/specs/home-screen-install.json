@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "home-screen-install",
+    "kind": "static",
+    "goal": "The app is installable to the home screen with the Unbreakable Fitness AU name and icon",
+    "requirementIndexes": [],
+    "acceptanceCriteriaIndexes": [],
+    "steps": [
+      "Open the app"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Unbreakable"
+      }
+    ]
+  }
+}

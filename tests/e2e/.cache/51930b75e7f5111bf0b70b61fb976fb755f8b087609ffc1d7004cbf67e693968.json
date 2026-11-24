@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T14:51:56.677Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap link \"Group Chat\"",
+        "target": {
+          "role": "link",
+          "name": "Group Chat"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "group-chat-post.e2e.ts::group-chat-post",
+      "targetId": "web",
+      "instructionDigest": "4bdd499a84d74ba7c9dfc24a0af515de99f5639630bfed90fce7b2799545bb58",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Tapped the \"Group Chat\" link; the app navigated to /chat and shows the Group Chat page (\"Community chat // Main\", \"The crew\", \"No messages yet\", a \"Write a message\" textbox and a disabled Send button).",
+    "startPath": "/",
+    "endPath": "/chat",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "Community chat// Main"
+      },
+      {
+        "text": "Live"
+      },
+      {
+        "text": "0 voices"
+      },
+      {
+        "text": "Unbreakable Fitness AU"
+      },
+      {
+        "text": "Members & coaches · one shared room"
+      },
+      {
+        "text": "No messages yet"
+      },
+      {
+        "text": "Kick off the conversation — share a win, ask a question, or hype up the crew."
+      },
+      {
+        "text": "Write a message"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "text": "Good afternoon"
+      },
+      {
+        "role": "heading",
+        "name": "Welcome back, Admin"
+      },
+      {
+        "text": "Your training, your crew, one place. Pick up where you left off and keep the streak alive."
+      },
+      {
+        "text": "Featured workout"
+      },
+      {
+        "text": "// Today"
+      },
+      {
+        "text": "No sessions programmed yet"
+      },
+      {
+        "text": "Your coaches haven't published a session yet. Check back soon or browse the library."
+      },
+      {
+        "role": "link",
+        "name": "Open training library"
+      }
+    ],
+    "endWaitMs": 10135,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

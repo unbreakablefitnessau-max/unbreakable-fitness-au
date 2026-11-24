@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T14:52:40.218Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "type",
+        "summary": "type \"newmember@unbreakable.test\" into textbox \"Member email\"",
+        "target": {
+          "role": "textbox",
+          "name": "Member email",
+          "placeholder": "member@email.com"
+        },
+        "value": "newmember@unbreakable.test"
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Send invite\"",
+        "target": {
+          "role": "button",
+          "name": "Send invite"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "admin-invite-member.e2e.ts::admin-invite-member",
+      "targetId": "web",
+      "instructionDigest": "15391cb1ea2ae0751623684d61b386ea7e937c16ffab085e1c732f86b2dd4cf8",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Typed newmember@unbreakable.test into the Member email field and pressed Send invite. The app confirmed \"Invite sent to newmember@unbreakable.test.\" and the Invited members list now shows 1 total with newmember@unbreakable.test (Invited 24 Nov 2026, status Invited, Revoke button).",
+    "startPath": "/admin",
+    "endPath": "/admin",
+    "endAnchors": [
+      {
+        "text": "Invite sent to newmember@unbreakable.test."
+      },
+      {
+        "text": "newmember@unbreakable.test"
+      },
+      {
+        "text": "Invited"
+      },
+      {
+        "role": "button",
+        "name": "Revoke"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "text": "No invites yet"
+      },
+      {
+        "text": "Invite your first member above and they'll appear here."
+      }
+    ],
+    "endWaitMs": 11278,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

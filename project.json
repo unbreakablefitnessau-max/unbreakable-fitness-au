@@ -1,0 +1,19 @@
+{
+  "overview": "An invite-only fitness app for Unbreakable Fitness AU members with workouts, completion tracking and a shared group chat, installable to iOS and Android home screens.",
+  "features": [
+    "Install to the iOS and Android home screen with a full icon set and branded launch screens",
+    "Runs full-screen like a native app with safe-area aware layout",
+    "Works offline after the first visit and updates automatically after new releases",
+    "Step-by-step Add to Home Screen guidance on iPhone and iPad",
+    "Invite-only member access with workouts, completion tracking and group chat"
+  ],
+  "category": "fitness",
+  "tags": [
+    "fitness",
+    "mobile-app",
+    "installable",
+    "members",
+    "chat"
+  ],
+  "last_updated": "2026-11-24T15:10:15.688Z"
+}

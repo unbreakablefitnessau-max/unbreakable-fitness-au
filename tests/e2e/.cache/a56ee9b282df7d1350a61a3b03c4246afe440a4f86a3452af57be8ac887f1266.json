@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T14:52:40.214Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Sign in with Internet Identity\"",
+        "target": {
+          "role": "button",
+          "name": "Sign in with Internet Identity"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "admin-invite-member.e2e.ts::admin-invite-member",
+      "targetId": "web",
+      "instructionDigest": "20beea429157208a1628c3483934f1a61deb31a431c38829c9285a5dd2ea408e",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "The app is already signed in: the header shows \"Sign out\" and the dashboard greets \"Welcome back, Admin\" with Admin/Coach badges. No further sign-in action was needed.",
+    "startPath": "/",
+    "endPath": "/",
+    "endAnchors": [
+      {
+        "text": "Admin"
+      },
+      {
+        "text": "Coach"
+      },
+      {
+        "role": "button",
+        "name": "Sign out"
+      },
+      {
+        "text": "Member Area"
+      },
+      {
+        "text": "Dashboard"
+      },
+      {
+        "text": "Training"
+      },
+      {
+        "text": "Group Chat"
+      },
+      {
+        "text": "Good afternoon"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "text": "Invite-only community"
+      },
+      {
+        "role": "heading",
+        "name": "Train like it can't break you."
+      },
+      {
+        "text": "The member home of Unbreakable Fitness AU. Coached programming, the crew chat and your training library — behind one door, opened by invitation."
+      },
+      {
+        "role": "button",
+        "name": "Sign in with Internet Identity"
+      },
+      {
+        "text": "Need an invite? Ask a member or coach."
+      },
+      {
+        "text": "Access gated"
+      },
+      {
+        "text": "Every member is invited by email. Sign in with the Internet Identity you used to accept your invite and the door opens automatically."
+      },
+      {
+        "text": "Coached blocks"
+      }
+    ],
+    "endWaitMs": 10166,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "flows": {
+    "admin-invite-member": {
+      "flowId": "admin-invite-member",
+      "specDigest": "73fd13f25f95a113e9a6b02369d96750d6c267b60a4fb9f88d78593a3df32807",
+      "status": "recorded",
+      "recordedAt": "2026-11-24T14:52:42.638Z",
+      "recordedBy": "deepseek-v4.1-flash",
+      "entries": [
+        "a56ee9b282df7d1350a61a3b03c4246afe440a4f86a3452af57be8ac887f1266.json",
+        "f72e5aee89995985ed123866e9b0544f25374fe37e4ff1fdad8e2e77a53a77c3.json",
+        "5e7e02e6c5b2b7a7623566951db272a75a479a08ddc423c5d861027ecbe51e47.json"
+      ],
+      "ranAfter": [
+        "group-chat-post"
+      ],
+      "ranWith": [
+        "group-chat-post"
+      ],
+      "passedTree": "6d8d3830080c8a4df542eb1761eec49d0bcbf9ca",
+      "visitedPaths": [
+        "/",
+        "/admin"
+      ]
+    },
+    "group-chat-post": {
+      "flowId": "group-chat-post",
+      "specDigest": "2e4eb670353ebf6ac045492034b025c2f4332318c2d0d1889da8dbbdccdc0bfd",
+      "status": "recorded",
+      "recordedAt": "2026-11-24T14:52:42.630Z",
+      "recordedBy": "deepseek-v4.1-flash",
+      "entries": [
+        "e03274f8cb8e361e75d504f80b9a1aee8581440a01be8d4606af2a8abed40129.json",
+        "51930b75e7f5111bf0b70b61fb976fb755f8b087609ffc1d7004cbf67e693968.json",
+        "977a203c4a5db0db8ca9adbc7ce89b8afb27957154c9452dec1ad531e6367749.json"
+      ],
+      "ranAfter": [],
+      "ranWith": [],
+      "passedTree": "6d8d3830080c8a4df542eb1761eec49d0bcbf9ca",
+      "visitedPaths": [
+        "/",
+        "/chat"
+      ]
+    },
+    "home-screen-install": {
+      "flowId": "home-screen-install",
+      "specDigest": "bd94c18f0ac965c5f771fe4e99c7a8f0be234714d9473449fcf858d5931be971",
+      "status": "recorded",
+      "recordedAt": "2026-11-24T14:48:17.639Z",
+      "recordedBy": "deepseek-v4.1-flash",
+      "entries": [],
+      "ranAfter": [
+        "admin-invite-member",
+        "group-chat-post"
+      ],
+      "ranWith": [
+        "admin-invite-member",
+        "group-chat-post"
+      ],
+      "passedTree": "6d8d3830080c8a4df542eb1761eec49d0bcbf9ca",
+      "visitedPaths": [
+        "/"
+      ],
+      "readOnly": true
+    },
+    "installable-app-shell": {
+      "flowId": "installable-app-shell",
+      "specDigest": "ce81d14bdfd6297865ecfbe85072bc5aa9db92d0bd26c0b4ea1e2cbc30b6ade0",
+      "status": "recorded",
+      "recordedAt": "2026-11-24T15:14:25.932Z",
+      "recordedBy": "deepseek-v4.1-flash",
+      "entries": [
+        "ae255f1b3521477f556197b9fab4c4751514eb805e454e4f1d83312abd931089.json"
+      ],
+      "ranAfter": [],
+      "ranWith": []
+    }
+  }
+}

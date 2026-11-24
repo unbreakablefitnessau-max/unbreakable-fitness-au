@@ -1,0 +1,105 @@
+{
+  "id": "/",
+  "name": "Unbreakable Fitness AU",
+  "short_name": "Unbreakable",
+  "description": "The invite-only member home of Unbreakable Fitness AU — coached programming, the crew chat and your training library.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "portrait-primary",
+  "background_color": "#0e0e0f",
+  "theme_color": "#0e0e0f",
+  "lang": "en-AU",
+  "dir": "ltr",
+  "categories": ["health", "fitness", "social"],
+  "icons": [
+    {
+      "src": "/assets/images/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/app-icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/app-icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/images/app-icon-maskable-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/images/screenshot-phone.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Unbreakable member dashboard on a phone"
+    },
+    {
+      "src": "/assets/images/screenshot-desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Unbreakable member dashboard on desktop"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "Your training overview and today's session",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/assets/images/app-icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Training",
+      "short_name": "Training",
+      "description": "Browse the coached workout library",
+      "url": "/workouts",
+      "icons": [
+        {
+          "src": "/assets/images/app-icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Group Chat",
+      "short_name": "Chat",
+      "description": "The crew chat for the whole gym",
+      "url": "/chat",
+      "icons": [
+        {
+          "src": "/assets/images/app-icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

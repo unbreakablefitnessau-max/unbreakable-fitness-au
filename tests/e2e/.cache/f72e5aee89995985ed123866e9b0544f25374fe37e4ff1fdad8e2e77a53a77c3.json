@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-24T14:52:40.216Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "navigate",
+        "summary": "navigate to \"/admin\"",
+        "url": "/admin"
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "admin-invite-member.e2e.ts::admin-invite-member",
+      "targetId": "web",
+      "instructionDigest": "581329ca0b7933ed777322e9b27eda596f929e750c32fc2f6ab7e3fcead3f2a8",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "caffeine-inference.chat",
+      "model": "deepseek-v4.1-flash"
+    },
+    "summary": "Navigated to /admin; the Admin page is open showing \"Member management // Admin\" with the \"Invite a member\" form (Member email textbox, disabled Send invite), \"Invited members\" (0 total, No invites yet) and \"Active members\" (0 active).",
+    "startPath": "/",
+    "endPath": "/admin",
+    "endAnchors": [
+      {
+        "text": "Coaches only"
+      },
+      {
+        "role": "heading",
+        "name": "Member management// Admin"
+      },
+      {
+        "text": "Control who trains with Unbreakable. Invite members, revoke access and promote coaches."
+      },
+      {
+        "text": "Grant access"
+      },
+      {
+        "role": "heading",
+        "name": "Invite a member"
+      },
+      {
+        "text": "Enter the email they signed up with. They join the crew the moment they sign in."
+      },
+      {
+        "text": "Member email"
+      },
+      {
+        "role": "textbox",
+        "name": "Member email",
+        "placeholder": "member@email.com"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "text": "Good afternoon"
+      },
+      {
+        "role": "heading",
+        "name": "Welcome back, Admin"
+      },
+      {
+        "text": "Your training, your crew, one place. Pick up where you left off and keep the streak alive."
+      },
+      {
+        "text": "Featured workout"
+      },
+      {
+        "text": "// Today"
+      },
+      {
+        "text": "No sessions programmed yet"
+      },
+      {
+        "text": "Your coaches haven't published a session yet. Check back soon or browse the library."
+      },
+      {
+        "role": "link",
+        "name": "Open training library"
+      }
+    ],
+    "endWaitMs": 10151,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "403fcccf39e2650a7e389bda5a9246bfe8c725769a98b3a749be67a096c16423",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "aec5acc8a8d7ba14d388c35095196d67ae7ad7199ff1168a3230addcf190cf8d",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

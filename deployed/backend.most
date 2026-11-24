@@ -1,0 +1,177 @@
+// Version: 4.0.0
+type AccessControlState__204832294 =
+  {
+    var adminAssigned : Bool;
+    userRoles : Map__175655829<Principal, UserRole__256279894>
+  };
+type Completion__165457863 =
+  {
+    completedAt : Timestamp__301639476;
+    id : Nat;
+    member : Principal;
+    workoutId : WorkoutId__785291263;
+    workoutTitle : Text
+  };
+type Completion__232372320 =
+  {
+    completedAt : Int;
+    id : Nat;
+    member : Principal;
+    workoutId : Nat;
+    workoutTitle : Text
+  };
+type Data__1061330525<K, V> =
+  {var count : Nat__565224867; kvs : [var ?(K, V)]};
+type Exercise__364819647 =
+  {
+    durationSeconds : ?Nat;
+    name : Text;
+    notes : ?Text;
+    reps : ?Nat;
+    sets : ?Nat
+  };
+type Exercise__531905903 =
+  {
+    durationSeconds : ?Nat;
+    name : Text;
+    notes : ?Text;
+    reps : ?Nat;
+    sets : ?Nat
+  };
+type Internal__1060388275<K, V> =
+  {children : [var ?Node__1010487028<K, V>]; data : Data__1061330525<K, V>};
+type InviteId__780897193 = Nat;
+type InviteStatus__530723341 = {#invited; #joined; #revoked};
+type InviteStatus__926674808 = {#invited; #joined; #revoked};
+type Invite__626046135 =
+  {
+    email : Text;
+    id : InviteId__780897193;
+    invitedAt : Timestamp__301639476;
+    joinedAt : ?Timestamp__301639476;
+    joinedPrincipal : ?Principal;
+    status : InviteStatus__530723341
+  };
+type Invite__640387750 =
+  {
+    email : Text;
+    id : Nat;
+    invitedAt : Int;
+    joinedAt : ?Int;
+    joinedPrincipal : ?Principal;
+    status : InviteStatus__926674808
+  };
+type Leaf__8515789<K, V> = {data : Data__1061330525<K, V>};
+type Map__175655829<K, V> = Map__975833162<K, V>;
+type Map__925935234<K, V> =
+  {var root : Node__1010487028<K, V>; var size : Nat__565224867};
+type Map__975833162<K, V> = Map__925935234<K, V>;
+type MemberProfile__18304435 =
+  {displayName : Text; email : Text; joinedAt : Int; principal : Principal};
+type MemberProfile__307885204 =
+  {
+    displayName : Text;
+    email : Text;
+    joinedAt : Timestamp__301639476;
+    principal : Principal
+  };
+type MessageId__291319400 = Nat;
+type Message__454780518 =
+  {
+    body : Text;
+    createdAt : Timestamp__301639476;
+    id : MessageId__291319400;
+    sender : Principal;
+    senderName : Text
+  };
+type Message__702227878 =
+  {
+    body : Text;
+    createdAt : Int;
+    id : Nat;
+    sender : Principal;
+    senderName : Text
+  };
+type Nat__565224867 = Nat__920180692;
+type Nat__920180692 = Nat;
+type NewActor__769816496 =
+  {
+    accessControlState : AccessControlState__204832294;
+    chatState : {var nextMessageId : Nat};
+    completions : Map__175655829<Nat, Completion__232372320>;
+    invites : Map__175655829<Nat, Invite__640387750>;
+    membersState : {var nextInviteId : Nat};
+    messages : Map__175655829<Nat, Message__702227878>;
+    profiles : Map__175655829<Principal, MemberProfile__18304435>;
+    workouts : Map__175655829<Nat, Workout__210159631>;
+    workoutsState : {var nextCompletionId : Nat; var nextWorkoutId : Nat}
+  };
+type Node__1010487028<K, V> =
+  {#internal : Internal__1060388275<K, V>; #leaf : Leaf__8515789<K, V>};
+type OldActor__512397517 = {};
+type Timestamp__301639476 = Int;
+type UserRole__256279894 = {#admin; #guest; #user};
+type WorkoutId__785291263 = Nat;
+type Workout__210159631 =
+  {
+    category : Text;
+    coachingNotes : Text;
+    createdAt : Int;
+    description : Text;
+    difficulty : Text;
+    durationMinutes : Nat;
+    exercises : [Exercise__364819647];
+    id : Nat;
+    title : Text
+  };
+type Workout__719688828 =
+  {
+    category : Text;
+    coachingNotes : Text;
+    createdAt : Timestamp__301639476;
+    description : Text;
+    difficulty : Text;
+    durationMinutes : Nat;
+    exercises : [Exercise__531905903];
+    id : WorkoutId__785291263;
+    title : Text
+  };
+{
+  "00000000_000000" : OldActor__512397517 -> NewActor__769816496
+}
+actor  {
+  stable accessControlState :
+    {
+      var adminAssigned : Bool;
+      userRoles : Map__175655829<Principal, UserRole__256279894>
+    };
+  stable chatState : {var nextMessageId : Nat};
+  stable completions :
+    {
+      var root : Node__1010487028<Nat, Completion__165457863>;
+      var size : Nat__565224867
+    };
+  stable invites :
+    {
+      var root : Node__1010487028<Nat, Invite__626046135>;
+      var size : Nat__565224867
+    };
+  stable membersState : {var nextInviteId : Nat};
+  stable messages :
+    {
+      var root : Node__1010487028<Nat, Message__454780518>;
+      var size : Nat__565224867
+    };
+  stable profiles :
+    {
+      var root : Node__1010487028<Principal, MemberProfile__307885204>;
+      var size : Nat__565224867
+    };
+  stable workouts :
+    {
+      var root : Node__1010487028<Nat, Workout__719688828>;
+      var size : Nat__565224867
+    };
+  stable workoutsState :
+    {var nextCompletionId : Nat; var nextWorkoutId : Nat}
+};

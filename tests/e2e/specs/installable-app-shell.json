@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "installable-app-shell",
+    "kind": "interactive",
+    "goal": "Open the app, sign in, and confirm the branded app shell and member experience load without a blank screen",
+    "requirementIndexes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "acceptanceCriteriaIndexes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "steps": [
+      "Sign in"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Unbreakable"
+      }
+    ]
+  }
+}
